@@ -6,6 +6,13 @@ from pathlib import Path
 
 """
 Main module for the boilerplate generator project.
+Navigate to the directory where you want to create a new project and run the script (C:\SCRIPTS\boilerplate_generator.bat + *directory name*) with the project name as the CLI input.
+
+The script will create a new directory with the project name and create the following files:
+- main.py (with boilerplate code)
+- functions.py
+- README.md
+
 """
 
 def create_project(project_name):
@@ -15,9 +22,11 @@ def create_project(project_name):
 
     main_file = project_dir / "main.py"
     functions_file = project_dir / "functions.py"
+    readme_file = project_dir / "README.md"
 
     main_file.touch()
     functions_file.touch()
+    readme_file.touch()
 
     boilerplate_code = """#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
